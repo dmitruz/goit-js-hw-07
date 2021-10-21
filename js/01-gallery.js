@@ -34,7 +34,7 @@ galleryImages.addEventListener('click', evt => {
         return;
     }
     originalImage = basicLightbox.create(`
-		<img src="${evt.target.dataset.source}" width="1200" height="900">
+		<img src="${evt.target.dataset.source}" width="1200" height="780">
 	`)
     originalImage.show()
 });
@@ -47,25 +47,3 @@ if (evt.code !== 'Escape') {
     originalImage.close();
 }
 console.log(galleryItems);
-/
-const galleryImages = document.querySelector('.gallery') 
-    const cardImage = createGalleryItems(galleryItems);
-    cardImage.insertAdjacentHTML('beforeend', cardImage);
-    galleryImages.addEventListener('keydown', onClickEscCloseImage);
-   
-    function createGalleryItems(galleryItems) {
-    return galleryItems.map(({description, original, preview}) => {
-        
-    
-    `<div class="gallery__item">
-    <a class="gallery__link" href="large-image.jpg">
-      <img
-        class="gallery__image"
-        src= ${preview}
-        data-source= ${original}
-        alt=${description}    />
-    </a>
-  </div> `
-  
-})
-.join('');
