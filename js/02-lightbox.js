@@ -1,11 +1,11 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 const galleryImages = document.querySelector('.gallery');
-const cardsImage = createGalleryItemCardsImage(galleryItems);
+const cardsImage = createGalleryItem(galleryItems);
 
 galleryImages.insertAdjacentHTML('beforeend', cardsImage);
 
-function createGalleryItemCardsImage(galleryItems) {
+function createGalleryItem(galleryItems) {
     return galleryItems
         .map(({ preview, original, description }) => {
             return `
@@ -19,7 +19,7 @@ function createGalleryItemCardsImage(galleryItems) {
         .join('');
 }
 
-var lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
     captions: true,
     captionsData: 'alt',
     captionPosition: 'bottom',

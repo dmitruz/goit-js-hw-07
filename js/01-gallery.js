@@ -2,14 +2,14 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
 const galleryImages = document.querySelector('.gallery');
-const cardsImage = createGalleryItemCardsImage(galleryItems);
+const cardsImage = createGaleryItem(galleryItems);
 let originalImage;
 
 galleryImages.insertAdjacentHTML('beforeend', cardsImage);
 
 galleryImages.addEventListener('keydown', onClickEscCloseImage);
 
-function createGalleryItemCardsImage(galleryItems) {
+function createGalleryItem(galleryItems) {
     return galleryItems
         .map(({ preview, original, description }) => {
             return `
