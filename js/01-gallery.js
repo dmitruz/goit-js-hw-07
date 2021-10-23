@@ -2,7 +2,7 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
 const galleryImages = document.querySelector('.gallery');
-const cardsImage = createGaleryItem(galleryItems);
+const cardsImage = createGalleryItem(galleryItems);
 let originalImage;
 
 galleryImages.insertAdjacentHTML('beforeend', cardsImage);
@@ -34,7 +34,7 @@ galleryImages.addEventListener('click', evt => {
         return;
     }
     originalImage = basicLightbox.create(`
-		<img src="${evt.target.dataset.source}" width="1200" height="780">
+		<img src="${evt.target.dataset.source}" width="1200" height="900">
 	`)
     originalImage.show()
 });
